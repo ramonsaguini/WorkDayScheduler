@@ -18,12 +18,12 @@ function createTimeBlock() {
     var eventCol = $("<div>").addClass("col-md-10 description"); //!col description
     var eventTextarea = $("<textarea>").attr("data-hour", hour);//! insert data / hour
 
-    if (hour < currentHour) {
-      eventTextarea.addClass('past');
+    if (hour < currentHour) { //! if hour is < current hour, add class past in the text Area event
+      eventTextarea.addClass('past'); //! if hour is equal current hour, add class present in the text Area event
     } else if (hour === currentHour) {
-      eventTextarea.addClass(present');
+      eventTextarea.addClass('present')
     } else {
-
+      eventTextarea.addClass('future'); //! if hour is > the current hour, add class future in the text Area event
     }
 
   }
