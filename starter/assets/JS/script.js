@@ -67,7 +67,7 @@ $(document).ready(function () {
   }
 
   //! BTN to clear all events
-  let clearAllBtn = $("<button>").attr("id", "clearAllBtn").addClass("btn btn-warning").text("Clear All");
+  let clearAllBtn = $("<button>").attr("id", "clearAllBtn").addClass("btn btn-warning fixed-bottom").text("Clear All");
   clearAllBtn.on("click", function () {
     clearAllTextareas();
   });
