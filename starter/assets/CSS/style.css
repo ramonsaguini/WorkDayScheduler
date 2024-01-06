@@ -3,6 +3,7 @@ body {
   font-size: 16px;
   line-height: 1;
   margin-bottom: 50px;
+  background-color: rgb(175, 244, 244);
 }
 
 textarea {
@@ -16,10 +17,12 @@ textarea {
 
 header {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-image: url(../Images/background.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(12, 12, 12);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 1px solid black;
   padding: 60px;
 }
 
