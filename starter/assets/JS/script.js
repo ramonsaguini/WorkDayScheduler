@@ -44,9 +44,11 @@ $(document).ready(function () {
         let hourToSave = $(this).attr("data-hour"); //! attr class data-hour
         let eventToSave = $("textarea[data-hour=" + hourToSave + "]").val();
         localStorage.setItem("event_" + hourToSave, eventToSave); //!saving in the local storage
+        alert("Saved");
 
         //! Remove 'active' class after saving 
         $("textarea[data-hour=" + hourToSave + "]").removeClass("active");
+        window.scrollTo(0, 0);
       });
 
       //!Append all btns, txt areas and hours areas
