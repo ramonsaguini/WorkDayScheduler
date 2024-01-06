@@ -38,9 +38,10 @@ header {
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #ecdede;
   color: #000000;
   border-top: 1px dashed #000000;
+  text-align: center;
 }
 
 .past {
