@@ -44,11 +44,11 @@ $(document).ready(function () {
         let hourToSave = $(this).attr("data-hour"); //! attr class data-hour
         let eventToSave = $("textarea[data-hour=" + hourToSave + "]").val();
         localStorage.setItem("event_" + hourToSave, eventToSave); //!saving in the local storage
-        alert("Saved");
+        alert("Saved successfully !!"); //! Show alert when clicked save
 
         //! Remove 'active' class after saving 
         $("textarea[data-hour=" + hourToSave + "]").removeClass("active");
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0); //! scrow up when confirm in the alert windows
       });
 
       //!Append all btns, txt areas and hours areas
@@ -70,8 +70,11 @@ $(document).ready(function () {
 
   //! BTN to clear all events
   let clearAllBtn = $("<button>").attr("id", "clearAllBtn").addClass("btn btn-warning fixed-bottom").text("Clear All");
-  clearAllBtn.on("click", function () {
-    clearAllTextareas();
+  clearAllBtn.on("click", function () { //! func to show alert to confirm to clear
+    if (confirm("Are you sure you want to clear all events?")) {
+      clearAllTextareas();
+      alert("All events have been successfully cleared!");
+    }
   });
 
   function clearAllTextareas() {
